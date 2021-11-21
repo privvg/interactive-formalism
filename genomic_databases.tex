@@ -1,0 +1,63 @@
+\title{A Very Simple \LaTeXe{} Template}
+\author{
+        Vitaly Surazhsky \\
+                Department of Computer Science\\
+        Technion---Israel Institute of Technology\\
+        Technion City, Haifa 32000, \underline{Israel}
+            \and
+        Yossi Gil\\
+        Department of Computer Science\\
+        Technion---Israel Institute of Technology\\
+        Technion City, Haifa 32000, \underline{Israel}
+}
+\date{\today}
+
+\documentclass[12pt]{article}
+
+\usepackage{mathtools}
+\begin{document}
+\maketitle
+
+% \begin{abstract}
+% This is the paper's abstract \ldots
+% \end{abstract}
+
+\section*{Introduction}
+Haplotype database representation
+
+\subsection*{Objective}
+We want to apply differential privacy Techniques to haplotypes
+
+\subsection*{Basics}
+A database $x$ is a collection  of elements of a universe $\mathcal{X}$ of rows (records)
+The histogram of a database is a vector $x_i \ldots x_n, n = |\mathcal{X}| $and $x_i$ is the number
+of repeats of a row in the database. The $l_1$ norm of a database is defined as
+\begin{equation}
+        \|x\|_1 = \sum_{i=1}^{|\mathcal{X}|} |x_i|
+\end{equation}
+
+
+
+The distance is defined thought the norm in the usual way
+
+A haplotype is a  collection of nodes and edges (connections between nodes), in
+other words a graph database.
+Graph databases can be represented relational through with adjacency lists: https://en.wikipedia.org/wiki/Adjacency_list
+So for any graph we need a column of nodes, and a column of adjacent nodes
+
+\begin{corollary*}
+Let x,y be haplotypes. Then $\|x-y\|_1 \leq 1$ iff x and y differ on exacly one node
+
+\end{corollary*}
+\paragraph{Outline}
+The remainder of this article is organized as follows.
+Section~\ref{previous work} gives account of previous work.
+Our new and exciting results are described in Section~\ref{results}.
+Finally, Section~\ref{conclusions} gives the conclusions.
+
+
+\bibliographystyle{abbrv}
+\bibliography{simple}
+
+\end{document}
+This is never printed
